@@ -6,6 +6,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["digest"],
+      "automerge": true,
       "enabled": true
     },
     {
