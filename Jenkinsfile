@@ -5,7 +5,7 @@ def versionMapping = [
         platform: 'java',
         majorMinorVersion: '11.0',
          // renovate: datasource=docker depName=eclipse-temurin versioning=docker
-        version: '11-jre@sha256:19862fcd2e6ec8760bbce37bfd3388ceca000b24ebf3033a5367b9142d9d05e2'
+        version: '11-jre@sha256:f31717a7a4c0d7cc9e50008544d269c90d6894dd70cdcbb28da8060913fcf8ad'
     ],
     [
         platform: 'java',
