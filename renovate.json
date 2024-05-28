@@ -3,15 +3,25 @@
   "extends": [
     "config:recommended"
   ],
-    "enabledManagers": ["regex"],
-    "customManagers": [
+  "packageRules": [
     {
-      "customType": "regex",
-      "datasourceTemplate": "docker",
-      "fileMatch": ["^Jenkinsfile$"],
-      "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+version: \\'(?<currentValue>[^@\"]+)(@(?<currentDigest>sha256:[a-f0-9]+))?\\'"
-      ]
+      "matchUpdateTypes": ["digest"],
+      "enabled": true
+    },
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "enabled": false
     }
+  ],
+  "enabledManagers": ["regex"],
+  "customManagers": [
+  {
+    "customType": "regex",
+    "datasourceTemplate": "docker",
+    "fileMatch": ["^Jenkinsfile$"],
+    "matchStrings": [
+      "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s+version: \\'(?<currentValue>[^@\"]+)(@(?<currentDigest>sha256:[a-f0-9]+))?\\'"
+    ]
+  }
   ]
 }
