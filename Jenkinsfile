@@ -17,7 +17,7 @@ def versionMapping = [
         platform: 'nginx',
         majorMinorVersion: '1.25',
          // renovate: datasource=docker depName=nginx versioning=docker
-        version: '1.25-bookworm@sha256:e688fed0b0c7513a63364959e7d389c37ac8ecac7a6c6a31455eca2f5a71ab8b'
+        version: '1.25-bookworm@sha256:a484819eb60211f5299034ac80f6a681b06f89e65866ce91f356ed7c72af059c'
     ],
     [
         platform: 'python',
